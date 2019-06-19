@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- <% load staticfiles %> -->
+<html>
+<head>
+	<title>Product viewer</title>
+</head>
+<body>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<h1>Welcome to Product Viewer Page</h1>
+	<h4>Following are the Products Uploaded through the csv file</h4> 
+	<div class="djangtwo">
+		<!-- <% if products_list %> -->
+		<table class="table table-striped">
+		<thead>
+			<th>Product Name</th>
+			<th>SKU</th>
+			<th>Description</th>
+			<th>Status</th>
+		</thead>
+		{% for prod in products_list %}
+			<tr>
+				<td>{{ prod.name }}</td>
+				<td>{{ prod.sku }}</td>
+				<td>{{ prod.description }}</td>
+				<td>{{ prod.status }}</td>
+			</tr>
+		{% endfor %}
+		</table>
+	</div>
+
+</body>
+</html>
